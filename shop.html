@@ -1,0 +1,351 @@
+<html><head>
+<title>DESIGNO - Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary: #2A2A2A;
+    --accent: #FF5733;
+    --light: #F5F5F5;
+}
+
+body {
+    background: var(--light);
+}
+
+nav {
+    background: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+.filters {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: var(--primary);
+    color: white;
+}
+
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.add-to-cart {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--accent);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+.pagination {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.page-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-button:hover,
+.page-button.active {
+    background: var(--primary);
+    color: white;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DESIGNO</a></div>
+            <div class="nav-links">
+                <a href="/shop.html">Shop</a>
+                <a href="/collections.html">Collections</a>
+                <a href="/about.html">About</a>
+                <a href="/cart.html">Cart (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="filters">
+            <button class="filter-button active">All</button>
+            <button class="filter-button">Lighting</button>
+            <button class="filter-button">Furniture</button>
+            <button class="filter-button">Decor</button>
+            <button class="filter-button">Kitchen</button>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#FF5733" stroke-width="2"/>
+                        <rect x="30" y="30" width="40" height="40" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Minimalist Desk Lamp</h3>
+                    <p>Clean lines and pure functionality merge in this elegant lighting solution.</p>
+                    <span class="price">$129</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <polygon points="50,10 90,90 10,90" fill="none" stroke="#FF5733" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Geometric Vase</h3>
+                    <p>A statement piece that brings modern art to your living space.</p>
+                    <span class="price">$89</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <rect x="20" y="20" width="60" height="60" fill="none" stroke="#FF5733" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="30" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Bauhaus Clock</h3>
+                    <p>Time meets timeless design in this classic wall piece.</p>
+                    <span class="price">$159</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <ellipse cx="50" cy="50" rx="40" ry="25" fill="none" stroke="#FF5733" stroke-width="2"/>
+                        <line x1="20" y1="50" x2="80" y2="50" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Nordic Chair</h3>
+                    <p>Scandinavian design meets comfort in this timeless piece.</p>
+                    <span class="price">$299</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <path d="M20,80 Q50,20 80,80" fill="none" stroke="#FF5733" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="25" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Ceramic Bowl Set</h3>
+                    <p>Handcrafted perfection for your dining experience.</p>
+                    <span class="price">$79</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100">
+                        <rect x="25" y="25" width="50" height="50" fill="none" stroke="#FF5733" stroke-width="2" transform="rotate(45, 50, 50)"/>
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>Wall Shelf</h3>
+                    <p>Functional storage with architectural appeal.</p>
+                    <span class="price">$149</span>
+                    <a href="https://example.com/cart/add" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="page-button active">1</button>
+            <button class="page-button">2</button>
+            <button class="page-button">3</button>
+            <button class="page-button">→</button>
+        </div>
+    </main>
+
+    <script>
+        // Cart functionality
+        let cartCount = 0;
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                cartCount++;
+                document.querySelector('.nav-links a:last-child').textContent = `Cart (${cartCount})`;
+                
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 100);
+            });
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        // Pagination
+        document.querySelectorAll('.page-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.page-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        // Scroll animation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body></html>

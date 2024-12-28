@@ -1,0 +1,307 @@
+<html><head>
+<title>DESIGNO - About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary: #2A2A2A;
+    --accent: #FF5733;
+    --light: #F5F5F5;
+}
+
+body {
+    background: var(--light);
+}
+
+nav {
+    background: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+}
+
+.about-hero {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.values-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+}
+
+.value-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.member-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.team-member h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DESIGNO</a></div>
+            <div class="nav-links">
+                <a href="/shop.html">Shop</a>
+                <a href="/collections.html">Collections</a>
+                <a href="/about.html">About</a>
+                <a href="/cart.html">Cart (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-hero">
+            <svg class="hero-background" width="100%" height="100%" viewBox="0 0 100 100">
+                <pattern id="pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="1" fill="var(--accent)"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#pattern)"/>
+            </svg>
+            <h1>Crafting Beautiful Spaces</h1>
+            <p>At DESIGNO, we believe that great design has the power to transform spaces and enrich lives. Our carefully curated collection brings together the finest in contemporary, minimalist, and timeless design pieces.</p>
+        </section>
+
+        <section class="values-section">
+            <div class="value-card">
+                <svg class="value-icon floating" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                    <path d="M30 50 L45 65 L70 35" stroke="var(--primary)" stroke-width="3" fill="none"/>
+                </svg>
+                <h3>Quality First</h3>
+                <p>We partner with craftsmen and manufacturers who share our commitment to excellence and sustainability.</p>
+            </div>
+
+            <div class="value-card">
+                <svg class="value-icon floating" viewBox="0 0 100 100">
+                    <rect x="25" y="25" width="50" height="50" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke="var(--primary)" stroke-width="2"/>
+                </svg>
+                <h3>Thoughtful Design</h3>
+                <p>Every piece in our collection is chosen for its perfect balance of form and function.</p>
+            </div>
+
+            <div class="value-card">
+                <svg class="value-icon floating" viewBox="0 0 100 100">
+                    <polygon points="50,20 80,80 20,80" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                    <line x1="50" y1="20" x2="50" y2="80" stroke="var(--primary)" stroke-width="2"/>
+                </svg>
+                <h3>Sustainable Future</h3>
+                <p>We're committed to environmental responsibility in our products and practices.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <svg class="member-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="var(--primary)"/>
+                        <circle cx="50" cy="100" r="40" fill="var(--primary)"/>
+                    </svg>
+                    <h3>Sarah Chen</h3>
+                    <p>Creative Director</p>
+                </div>
+
+                <div class="team-member">
+                    <svg class="member-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="var(--primary)"/>
+                        <circle cx="50" cy="100" r="40" fill="var(--primary)"/>
+                    </svg>
+                    <h3>Mark Thompson</h3>
+                    <p>Design Curator</p>
+                </div>
+
+                <div class="team-member">
+                    <svg class="member-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="var(--primary)"/>
+                        <circle cx="50" cy="100" r="40" fill="var(--primary)"/>
+                    </svg>
+                    <h3>Anna Kowalski</h3>
+                    <p>Product Specialist</p>
+                </div>
+
+                <div class="team-member">
+                    <svg class="member-avatar" viewBox="0 0 100 100">
+                        <circle cx="50" cy="40" r="25" fill="var(--primary)"/>
+                        <circle cx="50" cy="100" r="40" fill="var(--primary)"/>
+                    </svg>
+                    <h3>James Wilson</h3>
+                    <p>Customer Experience</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        } else {
+            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        }
+    });
+
+    let cartCount = 0;
+    document.querySelectorAll('.value-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+    </script>
+</body></html>
